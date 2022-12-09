@@ -14,7 +14,7 @@ async function managePosts(){
                     <td>${post.author}</td>
                     <td>${post.date}</td>
                     <td>${post.tags}</td>
-                    <td><a href="update-post.html">Uppdatera</a></td>
+                    <td><a href="update-post.html?id=${post._id}">Uppdatera</a></td>
                     <td><a class="delete" data-id =${post._id} href="#">Ta bort</a></td>
                 </tr
             </table>
