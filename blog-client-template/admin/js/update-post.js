@@ -1,12 +1,12 @@
 window.onload = function(){
     
     let urlParams = new URLSearchParams(window.location.search)
-    let punId = urlParams.get("id");
+    let postId = urlParams.get("id");
     
     
     async function getPost(){
         try{
-            const response = await fetch("https://blog-api-assignment.up.railway.app/posts/"+punId,{
+            const response = await fetch("https://blog-api-assignment.up.railway.app/posts/"+postId,{
                 method: 'GET'
             })
             const data = await response.json()
