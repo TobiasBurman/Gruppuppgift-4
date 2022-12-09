@@ -1,5 +1,117 @@
-table, td, th, tr {
-    border: 1px solid black;
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    
+}
+
+#content{
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+}
+
+#table,#create-post{
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%; 
     border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0 2px 15px rgba(64,64,64,.7);
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+    #table{
+        border-collapse: collapse;
+        
+        
+       
+    }
+   
+   
+   td , th{
+    padding: 7px 12px;
+    text-align: center;
+    border: 0.5px solid black;
+
+    
+   
+   }
+   th{
+    background-color: #f0929d;
+    color: #fafafa;
+    font-family: 'Open Sans',Sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+   }
+   
+   tr{
+    width: 100%;
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+    border: 0.2px solid black;
+   }
+   tr:nth-child(even){
+    background-color: #eeeeee;
+   }
+
+   #create-post{
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 500px; 
+    
+   }
+
+   #update,#delete{
+    color: black;
+   }
+   #update:hover{
+    color: rgb(255, 255, 255);
+    
+   }
+   #delete:hover{
+    color: rgb(255, 255, 255);
+    
+   }
+
+   a{
+    text-decoration: none;
+   }
+   #blog,#post{
+    
+    color: white;
+   }
+   .th22,#sub {
+    transition: all 0.07s ease-in;
+    
+    
+   }
+  .th22:hover {
+    background: #f0374c;
+    color: #464646;
+    box-shadow: 0 0 0 1px rgba(80, 80, 80, .5);
+  }
+
+  #sub{
+    background-color: white;
+  }
+  
+  #sub:hover{
+    background: white;
+    color: #464646;
+  }
+
+  input{
+    padding-right: 10px;
+  }
+  #admin{
+    color: white;
     padding: 5px;
+    
   }
