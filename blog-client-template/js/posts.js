@@ -26,7 +26,8 @@ async function getPosts(){
         for (let link of links){
             link.addEventListener('click', async function(e){
                 e.preventDefault()
-                
+            
+
 
             })
     }
