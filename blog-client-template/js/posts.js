@@ -13,7 +13,7 @@ async function getPosts(){
             <i>${posts.date}</i>
             <div>
                 <p class="text">${posts.content.slice(0,200)}<a href="post.html?id=${posts._id}" class="readMoreLink" data-id=${posts._id}>Read more...</a></p>
-                <p class="tags">Tags: ${posts.tags}</p>
+                <p class="tags">Tags: ${posts.tags.join(', ')}</p>
              </div>   
             `
             document.getElementById("content").innerHTML=blogPosts
@@ -27,7 +27,6 @@ async function getPosts(){
             link.addEventListener('click', async function(e){
                 e.preventDefault()
                 
-
             })
     }
 }
