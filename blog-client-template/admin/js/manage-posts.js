@@ -14,6 +14,8 @@ async function managePosts(){
                     <td>${post.author}</td>
                     <td>${post.date}</td>
                     <td>${post.tags}</td>
+                    <td><button>Uppdatera</button></td>
+                    <td><button>Ta bort</button></td>
                 </tr
 
             </table>
