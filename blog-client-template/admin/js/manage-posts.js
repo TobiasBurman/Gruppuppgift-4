@@ -10,12 +10,15 @@ async function managePosts(){
             document.getElementById("table").innerHTML += `
             <table>
                 <tr>
+                   
                     <td>${post.title}</td>
                     <td>${post.author}</td>
+                    <td>${post.content}</td>
                     <td>${post.date}</td>
                     <td>${post.tags}</td>
-                    <td><a href="update-post.html?id=${post._id}">Uppdatera</a></td>
-                    <td><a class="delete" data-id =${post._id} href="#">Ta bort</a></td>
+                    <td class="th22"><a id="update"href="update-post.html?id=${post._id}">Uppdatera</a></td>
+                    <td class="th22"><a id="delete"class="delete" data-id =${post._id} href="#">Ta bort</a></td>
+                   
                 </tr
             </table>
             `
@@ -51,6 +54,25 @@ async function deletePost(e){
         console.log(error)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function snow (){
 var snow = document.createElement('div');
