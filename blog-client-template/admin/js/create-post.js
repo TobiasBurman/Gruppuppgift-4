@@ -8,6 +8,7 @@ document.getElementById("create-post").addEventListener("submit", async function
         "tags": document.getElementById("input-tags").value
         
     }
+    
     console.log(object)
     try {
     await fetch('https://blog-api-assignment.up.railway.app/posts/', {
