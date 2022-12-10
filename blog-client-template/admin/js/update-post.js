@@ -27,31 +27,19 @@ window.onload = function(){
     }
     getPost()
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
     let form = document.getElementById("update-form");
     form.addEventListener("submit", async function(e){
         e.preventDefault()
         let stringJson = {
-            "content": document.getElementById("content-textarea").value
+            "title": document.getElementById("title").value,
+            "author": document.getElementById("author").value,
+            "content": document.getElementById("content-textarea").value,
+            "tags": document.getElementById("tags").value
+
         }
         try{
-             await fetch("https://blog-api-assignment.up.railway.app/posts/"+punId,{
-                method: 'GET',
+             await fetch("https://blog-api-assignment.up.railway.app/posts/"+postId,{
+                method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'
                   },
