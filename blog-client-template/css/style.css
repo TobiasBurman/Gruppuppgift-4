@@ -1,12 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');
+
+* {
+    font-family: Lato, sans-serif;
+    box-sizing: border-box;
+  }
+
 body{
-    background-color: antiquewhite;
+    background-color: rgb(218, 216, 216)
 }
 
-#content{
-
+#container{
+    max-width: 948px;
+    margin: 4em auto;
+    padding: 4em;
+    background: #fff;
+    border-radius: 1em;
     
+
 }
 
-.tags{
+.box{
+    padding: 20px;
+    margin-top: 20px;
     border-bottom: 1px solid black;
 }
+  
+  .box:hover {
+    transform: scale(1.05);
+  }
+
