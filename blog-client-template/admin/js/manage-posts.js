@@ -75,16 +75,7 @@ async function deletePost(e){
 
 
 function snow (){
-var snow = document.createElement('div');
-snow.style.position = 'absolute';
-snow.style.top = '0px';
-snow.style.left = '0px';
-snow.style.width = '100%';
-snow.style.height = '100%';
-snow.style.backgroundColor = 'red';
-snow.style.opacity = '0.5';
-snow.style.zIndex = '-1';
-document.body.appendChild(snow);
+const snow = document.getElementById("snow")
 var snowParticles = [];
 var snowParticleCount = 100;
 var snowParticleSize = 10;

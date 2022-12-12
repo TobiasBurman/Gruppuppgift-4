@@ -8,6 +8,7 @@ document.getElementById("create-post").addEventListener("submit", async function
         "tags": document.getElementById("input-tags").value
         
     }
+   
     
     console.log(object)
     try {
@@ -19,72 +20,65 @@ document.getElementById("create-post").addEventListener("submit", async function
         body: JSON.stringify(object) 
     })
 
+    
+
     location.replace('index.html')
 } catch(error) {
     console.log(error)
 }
 
-
 })
 
-
-
-
-
-
-
-
-
-
-
+new MultiSelectTag("input-tags")
 
 
 
 function snow (){
-    var snow = document.createElement('div');
-    snow.style.position = 'absolute';
-    snow.style.top = '0px';
-    snow.style.left = '0px';
-    snow.style.width = '100%';
-    snow.style.height = '100%';
-    snow.style.backgroundColor = 'red';
-    snow.style.opacity = '0.5';
-    snow.style.zIndex = '-1';
-    document.body.appendChild(snow);
-    var snowParticles = [];
-    var snowParticleCount = 100;
-    var snowParticleSize = 10;
-    var snowParticleSpeed = 1;
+  const snow = document.getElementById("snow")
+  var snowParticles = [];
+  var snowParticleCount = 100;
+  var snowParticleSize = 10;
+  var snowParticleSpeed = 1;
+  for (var i = 0; i < snowParticleCount; i++) {
+    var snowParticle = document.createElement('div');
+    snowParticle.style.position = 'absolute';
+    snowParticle.style.width = snowParticleSize + 'px';
+    snowParticle.style.height = snowParticleSize + 'px';
+    snowParticle.style.borderRadius = '50%';
+    snowParticle.style.backgroundColor = 'white';
+    snowParticle.style.opacity = '0.5';
+    snowParticle.style.zIndex = '-1';
+    snowParticle.style.top = Math.random() * window.innerHeight + 'px';
+    snowParticle.style.left = Math.random() * window.innerWidth + 'px';
+    snowParticles.push(snowParticle);
+    snow.appendChild(snowParticle);
+  }
+  
+  function animateSnow() {
     for (var i = 0; i < snowParticleCount; i++) {
-      var snowParticle = document.createElement('div');
-      snowParticle.style.position = 'absolute';
-      snowParticle.style.width = snowParticleSize + 'px';
-      snowParticle.style.height = snowParticleSize + 'px';
-      snowParticle.style.borderRadius = '50%';
-      snowParticle.style.backgroundColor = 'white';
-      snowParticle.style.opacity = '0.5';
-      snowParticle.style.zIndex = '-1';
-      snowParticle.style.top = Math.random() * window.innerHeight + 'px';
-      snowParticle.style.left = Math.random() * window.innerWidth + 'px';
-      snowParticles.push(snowParticle);
-      snow.appendChild(snowParticle);
-    }
-    
-    function animateSnow() {
-      for (var i = 0; i < snowParticleCount; i++) {
-        var snowParticle = snowParticles[i];
-        var top = parseInt(snowParticle.style.top);
-        snowParticle.style.top = (top + snowParticleSpeed) + 'px';
-        if (top > window.innerHeight) {
-          snowParticle.style.top = '0px';
-        }
+      var snowParticle = snowParticles[i];
+      var top = parseInt(snowParticle.style.top);
+      snowParticle.style.top = (top + snowParticleSpeed) + 'px';
+      if (top > window.innerHeight) {
+        snowParticle.style.top = '0px';
       }
-      requestAnimationFrame(animateSnow);
     }
-    animateSnow();
-    }
-    snow();
-    
+    requestAnimationFrame(animateSnow);
+  }
+  animateSnow();
+  }
+  snow();
+
+
+
+
+
+
+
+
+
+
+
 
 
 
