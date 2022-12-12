@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     outline: 0;
-    
+    box-sizing: border-box;
 }
 
 #content{
@@ -115,3 +115,45 @@
     padding: 5px;
     
   }
+
+  #content-textarea {
+    width: 50%;
+    height: max-content;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    background-color: #ffffff;
+    font-size: 16px;
+  }
+
+  #update-form{
+    max-width: 100%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+  }
+
+  #title,#author, #tags{
+    width: 20%;
+    margin: 5px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    height: 30px;
+    padding: 10px;
+    
+  }
+  #tags{
+    height: 30px;
+    padding: 12px 20px;
+  }
+
+  #update-sub{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
