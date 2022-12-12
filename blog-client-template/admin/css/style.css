@@ -175,3 +175,19 @@
     50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
     100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
   }
+
+  #update-sub{
+    width: 20%;
+    margin-top: 5px;
+  }
+
+  #tags, #update-sub, #content-textarea, #title, #author{
+    margin: 5px 20px;
+    padding: 10px;
+  }
+
+  h3 {
+    color: white;
+    margin-top: 20px;
+    margin-left: 22px;
+  }
