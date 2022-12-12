@@ -29,11 +29,9 @@
 }
     #table{
         border-collapse: collapse;
-        
-        
-       
+        background-color: #f0929d;
+
     }
-   
    
    td , th{
     padding: 7px 12px;
@@ -64,8 +62,11 @@
    #create-post{
     display: grid;
     grid-template-columns: 1fr;
-    min-height: 500px; 
-    
+    min-height: 700px; 
+    font-family: 'Open Sans',Sans-serif;
+    font-size:large;
+    font-weight: 200;
+    background-color: #f0929d;    
    }
 
    #update,#delete{
@@ -107,11 +108,13 @@
     color: #464646;
   }
 
-  input{
-    padding-right: 10px;
-  }
   #admin{
     color: white;
     padding: 5px;
+    
+  }
+
+  input{
+    font-size: medium;
     
   }

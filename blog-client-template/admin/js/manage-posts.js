@@ -16,8 +16,8 @@ async function managePosts(){
                     <td>${post.content}</td>
                     <td>${post.date}</td>
                     <td>${post.tags}</td>
-                    <td class="th22"><a id="update"href="update-post.html?id=${post._id}">Uppdatera</a></td>
-                    <td class="th22"><a id="delete"class="delete" data-id =${post._id} href="#">Ta bort</a></td>
+                    <td class="th22"><a id="update"href="update-post.html?id=${post._id}">Update</a></td>
+                    <td class="th22"><a id="delete"class="delete" data-id =${post._id} href="#">Delete</a></td>
                    
                 </tr
             </table>
