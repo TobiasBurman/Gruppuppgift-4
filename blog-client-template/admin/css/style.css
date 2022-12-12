@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     outline: 0;
-    box-sizing: border-box;
+    
 }
 
 #content{
@@ -13,147 +13,165 @@
         right: 0;
         z-index: 1;
 }
-
-#table,#create-post{
-    position: absolute;
-    z-index: 2;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    width: 60%; 
-    border-collapse: collapse;
-    border-spacing: 0;
-    box-shadow: 0 2px 15px rgba(64,64,64,.7);
-    border-radius: 12px 12px 0 0;
-    overflow: hidden;
-}
-    #table{
-        border-collapse: collapse;
-        
-        
-       
-    }
-   
-   
-   td , th{
-    padding: 7px 12px;
-    text-align: center;
-    border: 0.5px solid black;
-
-    
-   
-   }
-   th{
-    background-color: #f0929d;
-    color: #fafafa;
-    font-family: 'Open Sans',Sans-serif;
-    font-weight: 200;
-    text-transform: uppercase;
-   }
-   
-   tr{
-    width: 100%;
-    background-color: #fafafa;
-    font-family: 'Montserrat', sans-serif;
-    border: 0.2px solid black;
-   }
-   tr:nth-child(even){
-    background-color: #eeeeee;
-   }
-
-   #create-post{
-    display: grid;
-    grid-template-columns: 1fr;
-    min-height: 500px; 
-    
-   }
-
-   #update,#delete{
-    color: black;
-   }
-   #update:hover{
-    color: rgb(255, 255, 255);
-    
-   }
-   #delete:hover{
-    color: rgb(255, 255, 255);
-    
-   }
-
-   a{
-    text-decoration: none;
-   }
-   #blog,#post{
-    
-    color: white;
-   }
-   .th22,#sub {
-    transition: all 0.07s ease-in;
-    
-    
-   }
-  .th22:hover {
-    background: #f0374c;
-    color: #464646;
-    box-shadow: 0 0 0 1px rgba(80, 80, 80, .5);
+  
+  
+  form input, #textarea, #input-tags{
+    padding: 15px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: thin solid #d4d4d4;
   }
 
-  #sub{
-    background-color: white;
+  
+  form label{
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-left: 7px;
   }
   
-  #sub:hover{
-    background: white;
-    color: #464646;
-  }
-
-  input{
-    padding-right: 10px;
-  }
-  #admin{
-    color: white;
-    padding: 5px;
-    
-  }
-
-  #content-textarea {
-    width: 50%;
-    height: max-content;
-    padding: 12px 20px;
-    border: 2px solid #ccc;
-    border-radius: 15px;
-    background-color: #ffffff;
-    font-size: 16px;
-  }
-
-  #update-form{
-    max-width: 100%;
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid black;
-  }
-
-  #title,#author, #tags{
-    width: 20%;
-    margin: 5px;
-    border: 2px solid #ccc;
-    border-radius: 15px;
-    height: 30px;
+  #textarea{
+    min-height: 150px;
     padding: 10px;
-    
-  }
-  #tags{
-    height: 30px;
-    padding: 12px 20px;
-  }
-
-  #update-sub{
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
   }
   
+  form input[type=submit]{
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+    background-color: #f3e7fa;
+  }
+  
+  form input[type=submit]:hover{
+    background-color: #6a507b;
+    color: #fff;
+  }
+
+  h2{
+    font-weight: lighter;
+    margin-bottom: 40px;
+	  border-bottom: thin solid #d4d4d4;
+	  padding-bottom: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+  }
+  
+  form input:focus,
+  form textarea:focus{
+    outline: none;
+  }
+  
+  .success{
+    color: green;
+  }
+  
+  .error{
+    color: red;
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    min-height: 100vh;
+    color: #555;
+  }
+  
+  table{
+    width:  1000px;
+    margin: 30px auto;
+  }
+  
+  table th{
+    padding: 10px 0;
+    background-color: #f4f4f4;
+    /* background-color: #fff; */
+    border:  thin solid #d4d4d4;
+  }
+  
+  table td{
+    padding: 10px;
+    border:  thin solid #d4d4d4;
+    width: 18%;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  table img{
+    width:  70%;
+  }
+  
+  table td.total-price{
+    font-weight: bold;
+    font-size: 22px;
+  }
+  #update, #delete{
+    text-decoration: none;
+    color: darkred;
+    background-color: #ffecef;
+    padding: 10px 15px;
+  }
+  a{
+    text-decoration: none;
+    color: #555;
+    
+  }
+  #update:active,
+   #delete:active,
+   a:active{
+    background-color: #ccf4d6;
+    color:  green;
+  }
+  
+  table select{
+    padding: 10px;
+    width:  200px;
+    font-size: 16px;
+    border: thin solid #d4d4d4;
+    background-color: transparent;
+  }
+  table select:focus{
+    outline: none;
+  }
+  
+  table{
+    width:  70%;
+  }
+
+
+/* snow flakes */
+  body { background-color:#333; }
+  #snow{
+    background: none;
+   
+    background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index:1;
+    -webkit-animation: snow 10s linear infinite;
+    -moz-animation: snow 10s linear infinite;
+    -ms-animation: snow 10s linear infinite;
+    animation: snow 10s linear infinite;
+  }
+  @keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+  }
+  @-moz-keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+  }
+  @-webkit-keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+    50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+    100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+  }

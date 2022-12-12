@@ -16,8 +16,8 @@ async function managePosts(){
                     <td>${post.content}</td>
                     <td>${post.date}</td>
                     <td>${post.tags}</td>
-                    <td class="th22"><a id="update"href="update-post.html?id=${post._id}">Uppdatera</a></td>
-                    <td class="th22"><a id="delete"class="delete" data-id =${post._id} href="#">Ta bort</a></td>
+                    <td class="th22"><a id="update"href="update-post.html?id=${post._id}">Update</a></td>
+                    <td class="th22"><a id="delete"class="delete" data-id =${post._id} href="#">Delete</a></td>
                    
                 </tr
             </table>
@@ -75,16 +75,7 @@ async function deletePost(e){
 
 
 function snow (){
-var snow = document.createElement('div');
-snow.style.position = 'absolute';
-snow.style.top = '0px';
-snow.style.left = '0px';
-snow.style.width = '100%';
-snow.style.height = '100%';
-snow.style.backgroundColor = 'red';
-snow.style.opacity = '0.5';
-snow.style.zIndex = '-1';
-document.body.appendChild(snow);
+const snow = document.getElementById("snow")
 var snowParticles = [];
 var snowParticleCount = 100;
 var snowParticleSize = 10;
