@@ -7,7 +7,7 @@
   }
   
   
-  form{
+  #form{
     max-width: 400px;
     margin: 0 auto;
     position: relative;
@@ -29,7 +29,7 @@
 }
   
   
-  form input, #textarea, #input-tags{
+#form input, #input-tags{
     padding: 15px;
     margin-bottom: 30px;
     font-size: 18px;
@@ -37,11 +37,8 @@
     border: thin solid #d4d4d4;
   }
 
-  
-  form label{
-    display: inline-block;
-    padding-bottom: 10px;
-    padding-left: 7px;
+  #form select{
+    margin-top: 20px;
   }
   
   #textarea{
@@ -49,13 +46,14 @@
     padding: 10px;
   }
   
-  form input[type=submit]{
+  #form input[type=submit]{
     cursor: pointer;
     transition: color 0.3s, background-color 0.3s;
     background-color: #f3e7fa;
+  
   }
   
-  form input[type=submit]:hover{
+  #form input[type=submit]:hover{
     background-color: #6a507b;
     color: #fff;
   }
@@ -71,8 +69,8 @@
 
   }
   
-  form input:focus,
-  form textarea:focus{
+  #form input:focus,
+  #form textarea:focus{
     outline: none;
   }
   
