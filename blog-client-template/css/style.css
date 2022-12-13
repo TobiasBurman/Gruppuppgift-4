@@ -50,8 +50,11 @@ i {
     align-items: center;
 }
 #nav-posts > a{
-    border: 1px solid black;
-
+    padding: 5px;
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    border-radius: 5px;
 }
  
 
