@@ -1,84 +1,45 @@
-document.getElementById("create-post").addEventListener("submit", async function(e){
-    e.preventDefault();
+document.getElementById('form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
 
-    let object = {
-        "content": document.getElementById("textarea").value,
-        "title": document.getElementById("input-title").value,
-        "author": document.getElementById("input-author").value,
-        "tags": document.getElementById("input-tags").value
-        
-    }
-   
-    
-    console.log(object)
-    try {
-    await fetch('https://blog-api-assignment.up.railway.app/posts/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(object) 
-    })
+  
+  let formDataObject = serializeForm(form);
+// console.log(formDataObject.tags)
+// console.log(formDataObject.author)
+// console.log(formDataObject.title)
 
-    
 
-    location.replace('index.html')
-} catch(error) {
-    console.log(error)
-}
+  try {
+      await fetch('https://blog-api-assignment.up.railway.app/posts/', {
+          method: 'POST', // *GET, POST, PUT, DELETE, etc.
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formDataObject) // body data type must match "Content-Type" header
+      })
 
+      location.replace('index.html')
+  } catch(error) {
+      console.log(error)
+  }
 })
 
-new MultiSelectTag("input-tags")
 
+let serializeForm = function (form) {
+  var obj = {};
+  var formData = new FormData(form);
+  // console.log(formData.getAll());
 
+  for (var key of formData.keys()) {
+      let inputData = formData.getAll(key);
 
-function snow (){
-  const snow = document.getElementById("snow")
-  var snowParticles = [];
-  var snowParticleCount = 100;
-  var snowParticleSize = 10;
-  var snowParticleSpeed = 1;
-  for (var i = 0; i < snowParticleCount; i++) {
-    var snowParticle = document.createElement('div');
-    snowParticle.style.position = 'absolute';
-    snowParticle.style.width = snowParticleSize + 'px';
-    snowParticle.style.height = snowParticleSize + 'px';
-    snowParticle.style.borderRadius = '50%';
-    snowParticle.style.backgroundColor = 'white';
-    snowParticle.style.opacity = '0.5';
-    snowParticle.style.zIndex = '-1';
-    snowParticle.style.top = Math.random() * window.innerHeight + 'px';
-    snowParticle.style.left = Math.random() * window.innerWidth + 'px';
-    snowParticles.push(snowParticle);
-    snow.appendChild(snowParticle);
+      if (inputData.length > 1) {
+          obj[key] = inputData;
+      } else {
+          obj[key] = inputData[0];    
+      }
   }
   
-  function animateSnow() {
-    for (var i = 0; i < snowParticleCount; i++) {
-      var snowParticle = snowParticles[i];
-      var top = parseInt(snowParticle.style.top);
-      snowParticle.style.top = (top + snowParticleSpeed) + 'px';
-      if (top > window.innerHeight) {
-        snowParticle.style.top = '0px';
-      }
-    }
-    requestAnimationFrame(animateSnow);
-  }
-  animateSnow();
-  }
-  snow();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // console.log(obj);
+  return obj;
+};
