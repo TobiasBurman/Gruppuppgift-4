@@ -264,5 +264,23 @@
   }
 
 
+
+
  
-  
+  #update-sub{
+    width: 20%;
+    margin-top: 5px;
+  }
+
+  #tags, #update-sub, #content-textarea, #title, #author{
+    margin: 5px 20px;
+    padding: 10px;
+  }
+
+  h3 {
+    color: white;
+    margin-top: 20px;
+    margin-left: 22px;
+  }
+
+
