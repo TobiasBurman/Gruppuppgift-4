@@ -17,7 +17,9 @@ body{
     background: #fff;
     border-radius: 1em;
     
-
+}
+#content{
+    
 }
 
 .box{
@@ -30,6 +32,8 @@ i {
     font-weight: bold;
 }
 
-
+.box:hover{
+    transform: scale(1.05);
+}
  
 
