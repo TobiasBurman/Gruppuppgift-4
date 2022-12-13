@@ -13,11 +13,10 @@ async function managePosts(){
                    
                     <td>${post.title}</td>
                     <td>${post.author}</td>
-                    <td>${post.content}</td>
                     <td>${post.date}</td>
                     <td>${post.tags}</td>
-                    <td class="th22"><a id="update"href="update-post.html?id=${post._id}">Update</a></td>
-                    <td class="th22"><a id="delete"class="delete" data-id =${post._id} href="#">Delete</a></td>
+                    <td class="btnUpdate"><a id="update"href="update-post.html?id=${post._id}">Update</a></td>
+                    <td class="btnDelete"><a id="delete"class="delete" data-id =${post._id} href="#">Delete</a></td>
                    
                 </tr
             </table>

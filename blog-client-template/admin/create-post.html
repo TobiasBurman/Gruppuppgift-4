@@ -4,32 +4,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
     <div id="createPost">
     <div id="snow">
-    <form action="" id="form">
 
+    <form action="" id="form">
         <a id="admin" href="index.html">Admin page</a>
         <h2>Create Post</h2>
 
-        <input type="text" id="input-title" placeholder="Titel">
-        <input type="text" id="input-author" placeholder="Author">
-        <textarea name="" id="textarea" cols="30" rows="10"></textarea>
-        <select type="text" id="input-tags" placeholder="Tags">
-            <option value="">Please choose a tag</option>
+        <input name="title" type="text" id="input-title" placeholder="Titel" >
+        <input name="author" type="text" id="input-author" placeholder="Author">
+        <textarea name="content" id="textarea" cols="30" rows="10"></textarea>
+        <select name="tags" id="input-tags1" multiple>
             <option value="economics">Economics</option>
             <option value="travel">Travel</option>
             <option value="sports">Sports</option>
             <option value="games"">Games</option>
             <option value="food">Food</option>
-        </select>
+
+        </select>    
         <input id="sub" type="submit" value="Create post">
     </form>
     </div>
 </div>
-
     <script src="js/create-post.js"></script>
 </body>
 </html>
