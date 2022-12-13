@@ -11,7 +11,7 @@ window.onload = async function() {
             const data = await response.json()
             console.log(data)
             
-         document.getElementById("content").innerHTML=`
+         document.getElementById("content-post").innerHTML=`
                 <h2>${data.title}</h2>
                 <i>${data.author}</i>
                 <i>${data.date}</i>
